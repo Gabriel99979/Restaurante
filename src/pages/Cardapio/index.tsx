@@ -3,8 +3,8 @@ import styles from "./Cardapio.module.scss"
 export default function Cardapio() {
     return (
         <main>
-            <nav className="menu">
-
+            <nav className={styles.menu}>
+                <img src="../../assets/logo.sgv" alt="logo aluroni" />
             </nav>
         </main>
     );
