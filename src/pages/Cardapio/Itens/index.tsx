@@ -1,6 +1,6 @@
 import cardapio from './itens.json';
 import Item from './item';
-import styles from "./Itens.module.scss";
+import styles from './Itens.module.scss';
 import { useEffect, useState } from 'react';
 
 
@@ -26,18 +26,18 @@ export default function Itens(props: Props){
 
     function ordenar(novaLista: typeof cardapio){
         switch(ordenador) {
-            case 'porcao':
-                return novaLista.sort((a, b) => a.size > b.size ? 1 : -1);
+        case 'porcao':
+            return novaLista.sort((a, b) => a.size > b.size ? 1 : -1);
         
-            case 'qtd_pessoas':
-                return novaLista.sort((a, b) => a.serving > b.serving ? 1 : -1);
+        case 'qtd_pessoas':
+            return novaLista.sort((a, b) => a.serving > b.serving ? 1 : -1);
             
-            case 'preco': 
-                return novaLista.sort((a, b) => a.price > b.price? 1 : -1);
+        case 'preco': 
+            return novaLista.sort((a, b) => a.price > b.price? 1 : -1);
            
-             default:
-                return novaLista;
-    }
+        default:
+            return novaLista;
+        }
     }
 
     useEffect(() => {
@@ -48,10 +48,10 @@ export default function Itens(props: Props){
     return (
         <div className={styles.itens}>
             {lista.map((item) => (
-               <Item 
-               key={item.id}
-               {...item}
-               />
+                <Item 
+                    key={item.id}
+                    {...item}
+                />
             ))}
         </div>
     );
